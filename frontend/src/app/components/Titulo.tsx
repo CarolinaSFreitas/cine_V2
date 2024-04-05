@@ -40,13 +40,13 @@ function Titulo() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-red-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-red-800 md:dark:bg-transparent dark:border-red-700">
+          <ul className="flex flex-col font-medium mt-4 rounded-lg text-white bg-red-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-red-800 md:dark:bg-transparent dark:border-red-700">
             <li>
               {idClienteLogado ?
                 <div>
-                  <BiLogOutCircle className="inline" />{nomeClienteLogado} - 
+                  {nomeClienteLogado} - 
                   <span onClick={logout} 
-                        style={{cursor: 'pointer'}}> (sair)</span>  
+                        style={{cursor: 'pointer'}}> (sair <BiLogOutCircle className="inline" />) </span>  
                 </div>
                 :
                 <Link href="/login" className="block py-2 px-3 md:p-0 text-white bg-red-700 rounded md:bg-transparent md:text-white md:dark:text-white dark:bg-red-600 md:dark:bg-transparent" aria-current="page">
